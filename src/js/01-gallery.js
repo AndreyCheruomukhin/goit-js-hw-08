@@ -38,13 +38,13 @@ function onClick(event) {
   gallery.on('error.simplelightbox', function (closeModal) {
       console.log(e); // Some usefull information
   });
-    instance.show();
+    gallery.open();
     
         function closeModal(evt) {
        if (evt.code !== 'Escape') {
            return;
        } 
-            instance.close();
+            gallery.close();
     }
       
     }
