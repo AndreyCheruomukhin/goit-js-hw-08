@@ -22,21 +22,21 @@ const murkup = galleryItems.map(
 );
 
 container.insertAdjacentHTML("beforeend", murkup.join(""));
-container.addEventListener("click", onClick);
-function onClick(event) {
-  event.preventDefault();
+// container.addEventListener("click", onClick);
+// function onClick(event) {
+//   event.preventDefault();
 
-  if (event.target.tagName !== 'IMG') {
-    return;
-  }
+//   if (event.target.tagName !== 'IMG') {
+//     return;
+//   }
 
   let gallery = new SimpleLightbox('.gallery a');
   gallery.on('show.simplelightbox', function () {
-      // Do something…
+      
   });
   
   gallery.on('error.simplelightbox', function (closeModal) {
-      console.log(e); // Some usefull information
+      console.log(e); 
   });
     gallery.open();
     
@@ -47,6 +47,6 @@ function onClick(event) {
             gallery.close();
     }
       
-    }
+    // }
    
 console.log(galleryItems);
