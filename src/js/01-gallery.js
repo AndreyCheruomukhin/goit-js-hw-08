@@ -22,31 +22,8 @@ const murkup = galleryItems.map(
 );
 
 container.insertAdjacentHTML("beforeend", murkup.join(""));
-// container.addEventListener("click", onClick);
-// function onClick(event) {
-//   event.preventDefault();
 
-//   if (event.target.tagName !== 'IMG') {
-//     return;
-//   }
-
-  let gallery = new SimpleLightbox('.gallery a');
-  gallery.on('show.simplelightbox', function () {
-      
-  });
+  let gallery = new SimpleLightbox('.gallery a', { captionsData: "alt"});
   
-  gallery.on('error.simplelightbox', function (closeModal) {
-      console.log(e); 
-  });
-    gallery.open();
-    
-        function closeModal(evt) {
-       if (evt.code !== 'Escape') {
-           return;
-       } 
-            gallery.close();
-    }
-      
-    // }
-   
-console.log(galleryItems);
+  
+  
